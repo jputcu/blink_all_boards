@@ -6,24 +6,17 @@
  */
 #include "Arduino.h"
 
-void setup()
-{
-  // initialize LED digital pin as an output.
+// For Olimexino-u32
+// #define LED_BUILTIN 7
+
+void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
 }
 
-void loop()
-{
-  // turn the LED on (HIGH is the voltage level)
+void loop() {
   digitalWrite(LED_BUILTIN, HIGH);
-
-  // wait for a second
-  delay(1000);
-
-  // turn the LED off by making the voltage LOW
+  delay(500);
   digitalWrite(LED_BUILTIN, LOW);
-
-   // wait for a second
-  delay(1000);
+  delay(500);
 }
 
