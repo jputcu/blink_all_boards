@@ -6,8 +6,11 @@
  */
 #include "Arduino.h"
 
-// For Olimexino-u32
-// #define LED_BUILTIN 7
+#ifdef ALT_LED_BUILTIN
+// For Olimexino-u32 or Adafruit 32u4 breakout board
+#undef LED_BUILTIN
+#define LED_BUILTIN ALT_LED_BUILTIN
+#endif
 
 void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
